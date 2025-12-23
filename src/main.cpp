@@ -6,6 +6,7 @@
 */
 
 #include <GameTool.hpp>
+#include <cstdint>
 #include <events.hpp>
 #include <ECS/DenseZipper.hpp>
 #include <clock.hpp>
@@ -31,7 +32,7 @@ int main() {
 
     gtool.createComponent("window", eField::SYSTEM);
     gtool.createMap(MAP_BEGIN, 0);
-    gtool.createEntity(PLAYER, "player", {100.f, 100.f});
+    gtool.createEntity(PLAYER, "player", {36.f * 50 / 2, 36.f * 50 / 2});
 
     gtool.sub<te::Keys>("key_input", [&gtool](te::Keys keys){
         auto& plays = gtool.getComponent<addon::intact::Player>();
@@ -46,10 +47,16 @@ int main() {
             if (keys[te::Key::Z]) {
                 vel.y = -170.0;
                 yKeys = true;
+                anim.curAnim = 2;
+                anim.timestamp.delay = anim.frameInfos[2].frameDELAY;
             } else if (keys[te::Key::S]) {
                 vel.y = 170.0;
                 yKeys = true;
+                anim.curAnim = 1;
+                anim.timestamp.delay = anim.frameInfos[1].frameDELAY;
             } else {
+                anim.curAnim = 4;
+                anim.timestamp.delay = anim.frameInfos[4].frameDELAY;
                 vel.y = 0.0;
             }
             if (keys[te::Key::Q]) {
@@ -71,14 +78,12 @@ int main() {
             } else {
                 vel.x = 0.0;
             }
-            if (yKeys || xKeys) {
-                anim.curAnim = 1;
-                anim.timestamp.delay = anim.frameInfos[1].frameDELAY;
-                anim.timestamp.restart();
-            } else {
+            if (xKeys) {
                 anim.curAnim = 0;
                 anim.timestamp.delay = anim.frameInfos[0].frameDELAY;
-                anim.timestamp.restart();
+            } else if (!yKeys) {
+                anim.curAnim = 4;
+                anim.timestamp.delay = anim.frameInfos[4].frameDELAY;
             }
             if (yKeys && xKeys) {
                 vel.x *= 0.75;
