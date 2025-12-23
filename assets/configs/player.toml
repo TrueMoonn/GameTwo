@@ -1,0 +1,7 @@
+[ENTITIES.player]
+player = true
+position2 = true
+
+[ENTITIES.player.velocity2]
+x = 0.0
+y = 0.0

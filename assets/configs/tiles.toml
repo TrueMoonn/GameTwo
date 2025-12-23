@@ -1,0 +1,149 @@
+[ENTITIES.X]
+drawable = true
+position2 = true
+
+[ENTITIES.X.sprite]
+path = "assets/tilesests/Grass.png"
+size = [16, 16]
+scale = [50, 50]
+layer = 1
+
+[ENTITIES.X.animation]
+frames = [
+    [[1, 1], 1, 0.0, false]
+]
+
+[ENTITIES.W]
+drawable = true
+position2 = true
+
+[ENTITIES.W.sprite]
+path = "assets/tilesests/Grass.png"
+size = [16, 16]
+scale = [50, 50]
+layer = 1
+
+[ENTITIES.W.animation]
+frames = [
+    [[0, 5], 1, 0.0, false]
+]
+
+[ENTITIES.T]
+drawable = true
+position2 = true
+
+[ENTITIES.T.sprite]
+path = "assets/tilesests/Grass.png"
+size = [16, 16]
+scale = [50, 50]
+layer = 1
+
+[ENTITIES.T.animation]
+frames = [
+    [[1, 0], 1, 0.0, false]
+]
+
+[ENTITIES.B]
+drawable = true
+position2 = true
+
+[ENTITIES.B.sprite]
+path = "assets/tilesests/Grass.png"
+size = [16, 16]
+scale = [50, 50]
+layer = 1
+
+[ENTITIES.B.animation]
+frames = [
+    [[1, 2], 1, 0.0, false]
+]
+
+[ENTITIES.L]
+drawable = true
+position2 = true
+
+[ENTITIES.L.sprite]
+path = "assets/tilesests/Grass.png"
+size = [16, 16]
+scale = [50, 50]
+layer = 1
+
+[ENTITIES.L.animation]
+frames = [
+    [[0, 1], 1, 0.0, false]
+]
+
+[ENTITIES.R]
+drawable = true
+position2 = true
+
+[ENTITIES.R.sprite]
+path = "assets/tilesests/Grass.png"
+size = [16, 16]
+scale = [50, 50]
+layer = 1
+
+[ENTITIES.R.animation]
+frames = [
+    [[2, 1], 1, 0.0, false]
+]
+
+[ENTITIES.TL]
+drawable = true
+position2 = true
+
+[ENTITIES.TL.sprite]
+path = "assets/tilesests/Grass.png"
+size = [16, 16]
+scale = [50, 50]
+layer = 1
+
+[ENTITIES.TL.animation]
+frames = [
+    [[0, 0], 1, 0.0, false]
+]
+
+[ENTITIES.TR]
+drawable = true
+position2 = true
+
+[ENTITIES.TR.sprite]
+path = "assets/tilesests/Grass.png"
+size = [16, 16]
+scale = [50, 50]
+layer = 1
+
+[ENTITIES.TR.animation]
+frames = [
+    [[2, 0], 1, 0.0, false]
+]
+
+[ENTITIES.BL]
+drawable = true
+position2 = true
+
+[ENTITIES.BL.sprite]
+path = "assets/tilesests/Grass.png"
+size = [16, 16]
+scale = [50, 50]
+layer = 1
+
+[ENTITIES.BL.animation]
+frames = [
+    [[0, 2], 1, 0.0, false]
+]
+
+[ENTITIES.BR]
+drawable = true
+position2 = true
+
+[ENTITIES.BR.sprite]
+path = "assets/tilesests/Grass.png"
+size = [16, 16]
+scale = [50, 50]
+layer = 1
+
+[ENTITIES.BR.animation]
+frames = [
+    [[2, 2], 1, 0.0, false]
+]

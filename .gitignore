@@ -2,6 +2,10 @@
 build/
 game_two
 
+# IDE files
+.vscode/
+compile_flags.txt
+
 # Prerequisites
 *.d
 
