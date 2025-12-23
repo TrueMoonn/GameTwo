@@ -1,9 +1,13 @@
+# [MAP]
+# x = 30
+# y = 30
+
 [ENTITIES.X]
 drawable = true
 position2 = true
 
 [ENTITIES.X.sprite]
-path = "assets/tilesests/Grass.png"
+path = "assets/images/tilesests/Grass.png"
 size = [16, 16]
 scale = [50, 50]
 layer = 1
@@ -18,7 +22,7 @@ drawable = true
 position2 = true
 
 [ENTITIES.W.sprite]
-path = "assets/tilesests/Grass.png"
+path = "assets/images/tilesests/Grass.png"
 size = [16, 16]
 scale = [50, 50]
 layer = 1
@@ -33,7 +37,7 @@ drawable = true
 position2 = true
 
 [ENTITIES.T.sprite]
-path = "assets/tilesests/Grass.png"
+path = "assets/images/tilesests/Grass.png"
 size = [16, 16]
 scale = [50, 50]
 layer = 1
@@ -48,7 +52,7 @@ drawable = true
 position2 = true
 
 [ENTITIES.B.sprite]
-path = "assets/tilesests/Grass.png"
+path = "assets/images/tilesests/Grass.png"
 size = [16, 16]
 scale = [50, 50]
 layer = 1
@@ -63,7 +67,7 @@ drawable = true
 position2 = true
 
 [ENTITIES.L.sprite]
-path = "assets/tilesests/Grass.png"
+path = "assets/images/tilesests/Grass.png"
 size = [16, 16]
 scale = [50, 50]
 layer = 1
@@ -78,7 +82,7 @@ drawable = true
 position2 = true
 
 [ENTITIES.R.sprite]
-path = "assets/tilesests/Grass.png"
+path = "assets/images/tilesests/Grass.png"
 size = [16, 16]
 scale = [50, 50]
 layer = 1
@@ -93,7 +97,7 @@ drawable = true
 position2 = true
 
 [ENTITIES.TL.sprite]
-path = "assets/tilesests/Grass.png"
+path = "assets/images/tilesests/Grass.png"
 size = [16, 16]
 scale = [50, 50]
 layer = 1
@@ -108,7 +112,7 @@ drawable = true
 position2 = true
 
 [ENTITIES.TR.sprite]
-path = "assets/tilesests/Grass.png"
+path = "assets/images/tilesests/Grass.png"
 size = [16, 16]
 scale = [50, 50]
 layer = 1
@@ -123,7 +127,7 @@ drawable = true
 position2 = true
 
 [ENTITIES.BL.sprite]
-path = "assets/tilesests/Grass.png"
+path = "assets/images/tilesests/Grass.png"
 size = [16, 16]
 scale = [50, 50]
 layer = 1
@@ -138,7 +142,7 @@ drawable = true
 position2 = true
 
 [ENTITIES.BR.sprite]
-path = "assets/tilesests/Grass.png"
+path = "assets/images/tilesests/Grass.png"
 size = [16, 16]
 scale = [50, 50]
 layer = 1

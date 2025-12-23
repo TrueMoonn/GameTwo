@@ -1,7 +1,20 @@
 [ENTITIES.player]
 player = true
 position2 = true
+drawable = true
 
 [ENTITIES.player.velocity2]
 x = 0.0
 y = 0.0
+
+[ENTITIES.player.sprite]
+path = "assets/images/hallowkin.png"
+size = [192, 128]
+scale = [384, 256]
+layer = 2
+
+[ENTITIES.player.animation]
+frames = [
+    [[0, 0], 5, 0.3, true],
+    [[0, 1], 4, 0.09, true],
+]
