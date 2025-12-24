@@ -13,6 +13,7 @@
 #include <physic/components/velocity.hpp>
 #include <sfml/components/sprite.hpp>
 
+#include "Game.hpp"
 #include "player.hpp"
 
 static void changeAnim(addon::display::Animation& anim, PlayerAnimations idx) {
@@ -20,12 +21,12 @@ static void changeAnim(addon::display::Animation& anim, PlayerAnimations idx) {
     anim.timestamp.delay = anim.frameInfos[idx].frameDELAY;
 }
 
-void playerMovementsSubscription(te::GameTool& gtool) {
-    gtool.sub<te::Keys>("key_input", [&gtool](te::Keys keys){
-        auto& plays = gtool.getComponent<addon::intact::Player>();
-        auto& vels = gtool.getComponent<addon::physic::Velocity2>();
-        auto& anims = gtool.getComponent<addon::display::Animation>();
-        auto& sps = gtool.getComponent<addon::sfml::Sprite>();
+void Game::setPlayerMovement() {
+    sub<te::Keys>("key_input", [this](te::Keys keys){
+        auto& plays = getComponent<addon::intact::Player>();
+        auto& vels = getComponent<addon::physic::Velocity2>();
+        auto& anims = getComponent<addon::display::Animation>();
+        auto& sps = getComponent<addon::sfml::Sprite>();
 
         for (auto &&[_, vel, anim, sp] :
             ECS::DenseZipper(plays, vels, anims, sps)) {
