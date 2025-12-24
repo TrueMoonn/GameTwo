@@ -17,8 +17,8 @@ add_executable(${PROJECT_NAME}
     ${GAME_SRC_DIR}/main.cpp
 
     ${GAME_SRC_DIR}/Game/Game.cpp
-    ${GAME_SRC_DIR}/Game/mob_spawner.cpp
-    ${GAME_SRC_DIR}/Game/player.cpp
+    ${GAME_SRC_DIR}/Game/systems/mob_spawner.cpp
+    ${GAME_SRC_DIR}/Game/signals/player.cpp
 )
 
 target_include_directories(${PROJECT_NAME}

@@ -5,6 +5,7 @@
 ** Game.cpp
 */
 
+#include "ECS/Entity.hpp"
 #include "configs.hpp"
 #include "entities.hpp"
 #include "Game.hpp"
@@ -19,16 +20,30 @@ Game::Game() : _framelimit(FRAME_LIMIT) {
     for (auto& map : MAP_PATHS)
         addMap(map);
 
-    createMap(eField::MAP_BEGIN, 0);
-    createEntity(eField::PLAYER, "player",
+    _nextEntities[EntityType::SYSTEM] = eField::SYSTEM_F;
+    _nextEntities[EntityType::PLAYER] = eField::PLAYER_F;
+    _nextEntities[EntityType::MAP] = eField::MAP_BEGIN;
+    _nextEntities[EntityType::MOB] = eField::MOB_BEGIN;
+
+    _nextEntities.at(MAP) = createMap(nextEntity(MAP), 0) + 1;
+    createEntity(nextEntity(PLAYER), "player",
         {36.f * 50 / 2, 36.f * 50 / 2});
 
-    createComponent("window", eField::SYSTEM);
+    createComponent("window", nextEntity(SYSTEM));
     sub("closed", [this]() {_running = false;});
     _running = true;
 
     setPlayerMovement();
     setMobSpawner();
+}
+
+ECS::Entity Game::nextEntity(EntityType type) {
+    if (_nextEntities.at(type) > ENTITY_FIELDS.at(type).max) {
+        _nextEntities.at(type) = ENTITY_FIELDS.at(type).min;
+    } else {
+        _nextEntities.at(type) += 1;
+    }
+    return _nextEntities.at(type);
 }
 
 void Game::run() {
