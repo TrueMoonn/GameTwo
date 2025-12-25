@@ -21,9 +21,6 @@ class Game : public te::GameTool {
  public:
     Game();
 
-    void setPlayerMovement();
-    void setMobSpawner();
-
     ECS::Entity nextEntity(EntityType type);
 
     void run();

@@ -10,8 +10,8 @@
     #include <unordered_map>
     #include <ECS/Entity.hpp>
 
-    #define MAP_FIELD_SIZE 1000
-    #define MOB_FIELD_SIZE 2000
+    #define MAP_FIELD_SIZE 5000
+    #define MOB_FIELD_SIZE 4000
 
 enum EntityType {
     SYSTEM = 0,

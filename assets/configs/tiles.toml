@@ -151,3 +151,10 @@ layer = 1
 frames = [
     [[2, 2], 1, 0.0, false]
 ]
+
+[ENTITIES.S]
+position2 = true
+
+[ENTITIES.S.spawner]
+entity = "fire_skull"
+active = true

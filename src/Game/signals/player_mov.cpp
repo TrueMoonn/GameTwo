@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** GameTwo
 ** File description:
-** player.cpp
+** player_mov.cpp
 */
 
 #include <events.hpp>
@@ -14,6 +14,7 @@
 #include <sfml/components/sprite.hpp>
 
 #include "Game.hpp"
+#include "Game/signals.hpp"
 #include "player.hpp"
 
 static void changeAnim(addon::display::Animation& anim, PlayerAnimations idx) {
@@ -21,12 +22,12 @@ static void changeAnim(addon::display::Animation& anim, PlayerAnimations idx) {
     anim.timestamp.delay = anim.frameInfos[idx].frameDELAY;
 }
 
-void Game::setPlayerMovement() {
-    sub<te::Keys>("key_input", [this](te::Keys keys){
-        auto& plays = getComponent<addon::intact::Player>();
-        auto& vels = getComponent<addon::physic::Velocity2>();
-        auto& anims = getComponent<addon::display::Animation>();
-        auto& sps = getComponent<addon::sfml::Sprite>();
+void playerMovement(Game& game) {
+    game.sub<te::Keys>("key_input", [&game](te::Keys keys){
+        auto& plays = game.getComponent<addon::intact::Player>();
+        auto& vels = game.getComponent<addon::physic::Velocity2>();
+        auto& anims = game.getComponent<addon::display::Animation>();
+        auto& sps = game.getComponent<addon::sfml::Sprite>();
 
         for (auto &&[_, vel, anim, sp] :
             ECS::DenseZipper(plays, vels, anims, sps)) {

@@ -9,13 +9,17 @@
 
     #include <string>
 
+    #include "Game.hpp"
+
 struct Spawner {
-    Spawner() = default;
+    Spawner(const std::string& name, bool activity = false);
     Spawner(const Spawner&) = default;
     Spawner& operator=(const Spawner&) = default;
     Spawner(Spawner&&) = default;
     Spawner& operator=(Spawner&&) = default;
 
-    std::string entity_name = "";
-    bool active = false;
+    std::string entity_name;
+    bool active;
 };
+
+void spawnerComponent(Game& game);

@@ -1,16 +1,16 @@
 
 TL,T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,T,TR
-L,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,W,X,X,X,X,X,X,X,X,X,X,R
+L,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,W,X,X,X,X,X,X,X,X:S,X,X,R
 L,X,X,W,X,X,X,X,X,X,X,X,X,X,W,X,X,X,X,X,X,W,X,X,X,X,X,X,X,X,X,X,W,X,X,R
 L,X,X,X,X,X,X,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,R
-L,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,W,X,X,X,X,X,X,X,X,X,W,X,X,X,X,R
-L,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,R
+L,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,W,X,X,X,X:S,X,X,X,X,X,W,X,X,X,X,R
+L,X,W,X,X,X,X:S,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,R
 L,X,X,X,X,X,X,X,W,X,X,X,X,X,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,R
 L,X,X,X,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X,R
 L,X,X,X,X,X,X,X,X,X,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,W,X,X,X,X,X,R
 L,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,R
 L,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X,R
-L,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,R
+L,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X:S,X,X,X,X,X,R
 L,X,X,W,X,X,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,R
 L,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,W,X,X,X,R
 L,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,R
@@ -18,7 +18,7 @@ L,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,R
 L,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,R
 L,X,X,X,X,X,X,X,X,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,W,X,X,X,R
 L,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,W,X,X,X,X,X,X,X,X,X,X,X,R
-L,X,X,X,X,W,X,X,X,X,X,W,X,X,X,X,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,R
+L,X:S,X,X,X,W,X,X,X,X,X,W:S,X,X,X,X,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,R
 L,X,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,W,X,X,X,X,X,X,X,X,X,R
 L,X,X,X,X,X,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,R
 L,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X,X,R
@@ -27,11 +27,11 @@ L,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,R
 L,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,R
 L,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,W,X,X,X,X,X,X,W,X,X,X,X,X,X,X,R
 L,X,X,X,X,X,X,X,X,X,X,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,R
-L,X,X,X,X,X,W,X,X,X,X,X,X,X,X,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X,X,W,X,X,X,R
+L,X,X,X,X,X,W:S,X,X,X,X,X,X,X,X,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X,X,W,X,X,X,R
 L,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X,X,R
 L,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,R
-L,X,X,X,X,X,X,W,X,X,X,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,R
+L,X,X,X,X,X,X,W,X,X,X,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X:S,X,X,X,X,X,X,X,X,X,R
 L,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,R
 L,X,X,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,W,X,X,X,X,R
-L,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,R
+L,X,X,X,X,X,X,X,X,X,X,X,X:S,X,X,X,X,W,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,R
 BL,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,BR

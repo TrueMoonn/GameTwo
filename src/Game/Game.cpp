@@ -6,6 +6,9 @@
 */
 
 #include "ECS/Entity.hpp"
+#include "Game/components.hpp"
+#include "Game/signals.hpp"
+#include "Game/systems.hpp"
 #include "configs.hpp"
 #include "entities.hpp"
 #include "Game.hpp"
@@ -13,8 +16,15 @@
 Game::Game() : _framelimit(FRAME_LIMIT) {
     loadPlugins();
 
-    for (auto& sys : SYSTEMS_NAME)
+    for (auto& func : SYSTEMS)
+        func(*this);
+    for (auto& sys : PLUGIN_SYSTEMS)
         createSystem(sys);
+
+    for (auto& func : COMPONENTS)
+        func(*this);
+    for (auto& func : SIGNALS)
+        func(*this);
     for (auto& conf : CONFIG_PATHS)
         addConfig(conf);
     for (auto& map : MAP_PATHS)
@@ -32,9 +42,6 @@ Game::Game() : _framelimit(FRAME_LIMIT) {
     createComponent("window", nextEntity(SYSTEM));
     sub("closed", [this]() {_running = false;});
     _running = true;
-
-    setPlayerMovement();
-    setMobSpawner();
 }
 
 ECS::Entity Game::nextEntity(EntityType type) {

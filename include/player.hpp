@@ -19,5 +19,3 @@ enum PlayerAnimations {
 };
 
 #define MOV_SPEED 170.f
-
-void playerMovementsSubscription(te::GameTool& gtool);
