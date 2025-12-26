@@ -7,6 +7,21 @@ drawable = true
 x = 0.0
 y = 0.0
 
+[ENTITIES.player.health]
+amount = 100
+
+[ENTITIES.player.damage]
+amount = 1
+
+[ENTITIES.player.team]
+name = "ally"
+
+[ENTITIES.player.hitbox]
+top = -40
+left = -20
+width = 40
+height = 40
+
 [ENTITIES.player.sprite]
 path = "assets/images/player.png"
 size = [80, 80]

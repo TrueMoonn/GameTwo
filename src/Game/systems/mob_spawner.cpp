@@ -5,25 +5,41 @@
 ** mob_spawner.cpp
 */
 
+#include <ECS/DenseZipper.hpp>
+#include <maths/Vector.hpp>
+
 #include <physic/components/position.hpp>
+#include <interaction/components/player.hpp>
+#include <entity_spec/components/damage.hpp>
+#include <entity_spec/components/health.hpp>
 
-#include "ECS/DenseZipper.hpp"
-#include "Game/components/spawner.hpp"
-
+#include "ECS/DenseSA.hpp"
 #include "Game/systems.hpp"
 
 void mobSpawner(Game& game) {
     game.createSystem([&game](ECS::Registry&){
         static te::Timestamp delta(5.0f);
+        static float lvl = 1;
 
         if (!delta.checkDelay())
             return;
-        auto& spawners = game.getComponent<Spawner>();
-        auto& positions = game.getComponent<addon::physic::Position2>();
+        lvl *= 1.2;
 
-        for (auto&& [spa, pos] : ECS::DenseZipper(spawners, positions)) {
-            if (spa.active) {
-                game.createEntity(game.nextEntity(MOB), spa.entity_name, pos);
+        auto& players = game.getComponent<addon::intact::Player>();
+        auto& positions = game.getComponent<addon::physic::Position2>();
+        auto& healths = game.getComponent<addon::eSpec::Health>();
+        auto& damages = game.getComponent<addon::eSpec::Damage>();
+
+        std::size_t r = 600;
+        for (auto&& [_, pos] : ECS::DenseZipper(players, positions)) {
+            for (std::size_t i = 0; i < lvl; ++i) {
+                float a = std::rand() % 361;
+                std::size_t entity = game.nextEntity(MOB);
+                mat::Vector2f npos =
+                    {pos.x + r * std::sin(a), pos.y + r * std::cos(a)};
+                game.createEntity(entity, "fire_skull", npos);
+                GET_ENTITY_CMPT(healths, entity).amount *= lvl;
+                GET_ENTITY_CMPT(damages, entity).amount *= lvl;
             }
         }
     });

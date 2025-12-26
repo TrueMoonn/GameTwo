@@ -15,6 +15,7 @@
 
 Game::Game() : _framelimit(FRAME_LIMIT) {
     loadPlugins();
+    std::srand(std::time(0));
 
     for (auto& func : SYSTEMS)
         func(*this);
