@@ -26,6 +26,7 @@ add_executable(${PROJECT_NAME}
     ${GAME_SRC_DIR}/Game/systems/mob_looking_direction.cpp
 
     ${GAME_SRC_DIR}/Game/signals/player_mov.cpp
+    ${GAME_SRC_DIR}/Game/signals/entity_death.cpp
 )
 
 target_include_directories(${PROJECT_NAME}

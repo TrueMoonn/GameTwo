@@ -33,6 +33,24 @@ layer = 2
 
 [ENTITIES.fire_skull.animation]
 frames = [
-    [[0, 0], 4, 0.09, true],
+    [[0, 0], 4, 0.09, true]
+]
+
+[ENTITIES.fire_skull_dead]
+position2 = true
+drawable = true
+
+[ENTITIES.fire_skull_dead.sprite]
+path = "assets/images/monsters/fire_skull.png"
+size = [16, 16]
+scale = [32, 32]
+origin = [8, 16]
+layer = 2
+
+[ENTITIES.fire_skull_dead.animation]
+frames = [
     [[0, 8], 4, 0.2, false]
 ]
+
+[ENTITIES.fire_skull_dead.timeout]
+duration = 1.0
