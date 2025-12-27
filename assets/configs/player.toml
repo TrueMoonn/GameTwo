@@ -16,6 +16,9 @@ amount = 1
 [ENTITIES.player.team]
 name = "ally"
 
+[ENTITIES.player.xp]
+amount = 0
+
 [ENTITIES.player.hitbox]
 top = -40
 left = -20

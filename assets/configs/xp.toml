@@ -1,0 +1,23 @@
+[ENTITIES.xp]
+drawable = true
+position2 = true
+collectible = true
+
+[ENTITIES.xp.velocity2]
+x = 0
+y = 0
+
+[ENTITIES.xp.xp]
+amount = 1
+
+[ENTITIES.xp.sprite]
+path = "assets/images/monsters/fire_skull_fireball.png"
+size = [16, 16]
+scale = [32, 32]
+origin = [8, 16]
+layer = 2
+
+[ENTITIES.xp.animation]
+frames = [
+    [[0, 0], 4, 0.2, false]
+]

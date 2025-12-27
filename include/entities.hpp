@@ -12,12 +12,14 @@
 
     #define MAP_FIELD_SIZE 5000
     #define MOB_FIELD_SIZE 4000
+    #define XP_FIELD_SIZE 4000
 
 enum EntityType {
     SYSTEM = 0,
     PLAYER,
     MAP,
     MOB,
+    XP,
 };
 
 enum eField {
@@ -27,6 +29,8 @@ enum eField {
     MAP_END = MAP_BEGIN + MAP_FIELD_SIZE,
     MOB_BEGIN = MAP_END + 1,
     MOB_END = MOB_BEGIN + MOB_FIELD_SIZE,
+    XP_BEGIN = MOB_END + 1,
+    XP_END = XP_BEGIN + XP_FIELD_SIZE,
 };
 
 struct EntityFieldLink {
@@ -50,5 +54,9 @@ static const std::unordered_map<EntityType, EntityFieldLink> ENTITY_FIELDS {
     {MOB, {
         static_cast<std::size_t>(MOB_BEGIN),
         static_cast<std::size_t>(MOB_END)
+    }},
+    {XP, {
+        static_cast<std::size_t>(XP_BEGIN),
+        static_cast<std::size_t>(XP_END)
     }}
 };

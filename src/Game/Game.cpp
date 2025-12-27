@@ -35,6 +35,7 @@ Game::Game() : _framelimit(FRAME_LIMIT) {
     _nextEntities[EntityType::PLAYER] = eField::PLAYER_F;
     _nextEntities[EntityType::MAP] = eField::MAP_BEGIN;
     _nextEntities[EntityType::MOB] = eField::MOB_BEGIN;
+    _nextEntities[EntityType::XP] = eField::XP_BEGIN;
 
     _nextEntities.at(MAP) = createMap(nextEntity(MAP), 0) + 1;
     createEntity(nextEntity(PLAYER), "player",
