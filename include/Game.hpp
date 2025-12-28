@@ -23,9 +23,13 @@ class Game : public te::GameTool {
 
     ECS::Entity nextEntity(EntityType type);
 
+    void updateDifficulty(float);
+    float getDifficulty() const;
+
     void run();
 
  private:
+    float _difficulty;
     bool _running;
     te::Timestamp _framelimit;
     std::unordered_map<EntityType, ECS::Entity> _nextEntities;

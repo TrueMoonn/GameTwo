@@ -7,12 +7,13 @@
 
 #include "Game/components/xp.hpp"
 
-Xp::Xp(int amount) : amount(amount) {}
+Xp::Xp(int amount, int lvl) : amount(amount), level(lvl) {}
 
 void xpComponent(Game &game) {
     game.registerComponent<Xp>("xp",
         [&game](ECS::Entity e, const toml::table& params){
+        int level = params["level"].value_or(0);
         int amount = params["amount"].value_or(0);
-        game.createComponent<Xp>(e, amount);
+        game.createComponent<Xp>(e, amount, level);
     });
 }

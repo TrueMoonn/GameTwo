@@ -18,6 +18,7 @@ name = "ally"
 
 [ENTITIES.player.xp]
 amount = 0
+level = 1
 
 [ENTITIES.player.hitbox]
 top = -40

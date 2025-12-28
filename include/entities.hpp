@@ -10,6 +10,8 @@
     #include <unordered_map>
     #include <ECS/Entity.hpp>
 
+    #define MENU_FIELD_SIZE 100
+    #define HUD_FIELD_SIZE 100
     #define MAP_FIELD_SIZE 5000
     #define MOB_FIELD_SIZE 4000
     #define XP_FIELD_SIZE 4000
@@ -17,6 +19,8 @@
 enum EntityType {
     SYSTEM = 0,
     PLAYER,
+    MENU,
+    HUD,
     MAP,
     MOB,
     XP,
@@ -25,7 +29,11 @@ enum EntityType {
 enum eField {
     SYSTEM_F = 0,
     PLAYER_F = SYSTEM_F + 1,
-    MAP_BEGIN = PLAYER_F + 1,
+    MENU_BEGIN = PLAYER_F + 1,
+    MENU_END = MENU_BEGIN + MENU_FIELD_SIZE,
+    HUD_BEGIN = MENU_END + 1,
+    HUD_END = HUD_BEGIN + HUD_FIELD_SIZE,
+    MAP_BEGIN = HUD_END + 1,
     MAP_END = MAP_BEGIN + MAP_FIELD_SIZE,
     MOB_BEGIN = MAP_END + 1,
     MOB_END = MOB_BEGIN + MOB_FIELD_SIZE,
@@ -46,6 +54,14 @@ static const std::unordered_map<EntityType, EntityFieldLink> ENTITY_FIELDS {
     {PLAYER, {
         static_cast<std::size_t>(PLAYER_F),
         static_cast<std::size_t>(PLAYER_F)
+    }},
+    {MENU, {
+        static_cast<std::size_t>(MENU_BEGIN),
+        static_cast<std::size_t>(MENU_END)
+    }},
+    {HUD, {
+        static_cast<std::size_t>(HUD_BEGIN),
+        static_cast<std::size_t>(HUD_END)
     }},
     {MAP, {
         static_cast<std::size_t>(MAP_BEGIN),

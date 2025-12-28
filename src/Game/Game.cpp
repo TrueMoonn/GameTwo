@@ -15,6 +15,7 @@
 
 Game::Game() : _framelimit(FRAME_LIMIT) {
     loadPlugins();
+    _difficulty = 1.f;
     std::srand(std::time(0));
 
     for (auto& func : SYSTEMS)
@@ -33,6 +34,8 @@ Game::Game() : _framelimit(FRAME_LIMIT) {
 
     _nextEntities[EntityType::SYSTEM] = eField::SYSTEM_F;
     _nextEntities[EntityType::PLAYER] = eField::PLAYER_F;
+    _nextEntities[EntityType::MENU] = eField::MENU_BEGIN;
+    _nextEntities[EntityType::HUD] = eField::HUD_BEGIN;
     _nextEntities[EntityType::MAP] = eField::MAP_BEGIN;
     _nextEntities[EntityType::MOB] = eField::MOB_BEGIN;
     _nextEntities[EntityType::XP] = eField::XP_BEGIN;
@@ -60,4 +63,12 @@ void Game::run() {
         if (_framelimit.checkDelay())
             runSystems();
     }
+}
+
+void Game::updateDifficulty(float factor) {
+    _difficulty *= factor;
+}
+
+float Game::getDifficulty() const {
+    return _difficulty;
 }

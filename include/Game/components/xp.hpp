@@ -10,9 +10,10 @@
     #include "Game.hpp"
 
 struct Xp {
-    explicit Xp(int);
+    Xp(int, int);
 
     int amount;
+    int level;
 };
 
 void xpComponent(Game& game);
