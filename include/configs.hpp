@@ -26,6 +26,8 @@ static const std::vector<std::string> CONFIG_PATHS {
     "assets/configs/player.toml",
     "assets/configs/xp.toml",
     "assets/configs/monsters/fire_skull.toml",
+    "assets/configs/weapons/sword.toml",
+    "assets/configs/weapons/bow.toml",
 };
 
 static const std::vector<std::string> MAP_PATHS {

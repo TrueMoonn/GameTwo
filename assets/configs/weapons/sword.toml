@@ -1,0 +1,30 @@
+[ENTITIES.sword]
+drawable = true
+position2 = true
+
+[ENTITIES.sword.team]
+name = "ally"
+
+[ENTITIES.sword.damage]
+amount = 1
+
+[ENTITIES.sword.sprite]
+path = "assets/images/weapons/sword.png"
+size = [64, 46]
+scale = [128, 46]
+origin = [0, 23]
+layer = 3
+
+[ENTITIES.sword.hitbox]
+top = 0
+left = 0
+width = 128
+heigth = 46
+
+[ENTITIES.sword.animation]
+frames = [
+    [[0, 0], 7, 0.05, false]
+]
+
+[ENTITIES.sword.timeout]
+duration = 0.4

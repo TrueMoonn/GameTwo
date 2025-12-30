@@ -1,0 +1,37 @@
+[ENTITIES.bow]
+drawable = true
+position2 = true
+
+[ENTITIES.bow.velocity2]
+x = 0
+y = 0
+
+[ENTITIES.bow.team]
+name = "ally"
+
+[ENTITIES.bow.damage]
+amount = 1
+
+[ENTITIES.bow.health]
+amount = 1
+
+[ENTITIES.bow.sprite]
+path = "assets/images/monsters/fire_skull_fireball.png"
+size = [16, 16]
+scale = [46, 46]
+origin = [8, 8]
+layer = 3
+
+[ENTITIES.bow.hitbox]
+top = -23
+left = -23
+width = 46
+heigth = 46
+
+[ENTITIES.bow.animation]
+frames = [
+    [[0, 0], 7, 0.0, false]
+]
+
+[ENTITIES.bow.timeout]
+duration = 4

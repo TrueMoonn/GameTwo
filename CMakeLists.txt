@@ -18,19 +18,28 @@ add_executable(${PROJECT_NAME}
 
     ${GAME_SRC_DIR}/Game/Game.cpp
 
+    # COMPONENTS
     ${GAME_SRC_DIR}/Game/components/spawner.cpp
     ${GAME_SRC_DIR}/Game/components/mob.cpp
     ${GAME_SRC_DIR}/Game/components/xp.cpp
     ${GAME_SRC_DIR}/Game/components/collectible.cpp
+    ${GAME_SRC_DIR}/Game/components/weapons.cpp
 
+    # SYSTEMS
     ${GAME_SRC_DIR}/Game/systems/mob_spawner.cpp
     ${GAME_SRC_DIR}/Game/systems/mob_mov.cpp
     ${GAME_SRC_DIR}/Game/systems/mob_looking_direction.cpp
     ${GAME_SRC_DIR}/Game/systems/collect.cpp
     ${GAME_SRC_DIR}/Game/systems/upgrade_player.cpp
+    ${GAME_SRC_DIR}/Game/systems/player_weapon.cpp
 
+    # SIGNALS
     ${GAME_SRC_DIR}/Game/signals/player_mov.cpp
     ${GAME_SRC_DIR}/Game/signals/entity_death.cpp
+
+    # WEAPONS
+    ${GAME_SRC_DIR}/weapons/sword.cpp
+    ${GAME_SRC_DIR}/weapons/bow.cpp
 )
 
 target_include_directories(${PROJECT_NAME}

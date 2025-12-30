@@ -7,6 +7,12 @@ drawable = true
 x = 0.0
 y = 0.0
 
+[ENTITIES.player.weapons]
+list = [
+    ["sword", 1],
+    ["bow", 1]
+]
+
 [ENTITIES.player.health]
 amount = 100
 

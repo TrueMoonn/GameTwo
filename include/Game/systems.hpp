@@ -16,6 +16,7 @@ void mobSpawner(Game& game);
 void mobLookingDirection(Game& game);
 void collectXp(Game& game);
 void upgradePlayer(Game& game);
+void playerWeapon(Game& game);
 
 static const std::vector<std::function<void(Game&)>> SYSTEMS {
     &mobSpawner,
@@ -23,4 +24,5 @@ static const std::vector<std::function<void(Game&)>> SYSTEMS {
     &mobLookingDirection,
     &collectXp,
     &upgradePlayer,
+    &playerWeapon,
 };

@@ -19,3 +19,5 @@ enum PlayerAnimations {
 };
 
 #define MOV_SPEED 170.f
+
+#define XP_TO_LVL_UP(level) 10 * level
