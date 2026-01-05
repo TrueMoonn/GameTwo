@@ -30,13 +30,13 @@ void collectXp(Game& game) {
                 exps, positions, velocities, collectibles)) {
                 float dist = std::sqrt(std::pow(xpos.x - ppos.x, 2) +
                     std::pow(xpos.y - ppos.y, 2));
-                if (dist < 300) {
+                if (dist < 150) {
                     mat::Vector2f dir(ppos - xpos);
                     float length = std::sqrt(dir.x * dir.x + dir.y * dir.y);
                     dir /= length;
                     xvel.x += dir.x * dist;
                     xvel.y += dir.y * dist;
-                    xvel *= 0.97;
+                    xvel *= 0.95;
                 }
                 if (dist < 30 &&
                     std::sqrt(std::pow(xvel.x, 2) + std::pow(xvel.y, 2)) < 100) {
