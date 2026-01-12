@@ -13,7 +13,7 @@
 #include "Game/systems.hpp"
 
 void mobLookingDirection(Game& game) {
-    game.createSystem([&game](ECS::Registry&){
+    game.createSystem("mob_looking_direction", [&game](ECS::Registry&){
         auto& velocities = game.getComponent<addon::physic::Velocity2>();
         auto& sprites = game.getComponent<addon::sfml::Sprite>();
         auto& mobs = game.getComponent<Mob>();

@@ -14,14 +14,27 @@
 #include <physic/components/hitbox.hpp>
 #include <entity_spec/components/damage.hpp>
 #include <sfml/components/sprite.hpp>
+#include <iostream>
+#include <map>
 
 #include "entities.hpp"
 #include "weapons.hpp"
 
 void swordWeapon(Game& game, int level, ECS::Entity player) {
-    static te::Timestamp delta(1.5f);
-    if (!delta.checkDelay())
+    // Use per-player cooldown instead of global static
+    static std::map<ECS::Entity, te::Timestamp> player_cooldowns;
+    
+    // Initialize cooldown for new players
+    if (player_cooldowns.find(player) == player_cooldowns.end()) {
+        player_cooldowns.emplace(player, te::Timestamp(1.5f));
+        std::cout << "[swordWeapon] Initialized cooldown for player " << player << std::endl;
+    }
+    
+    auto& cooldown = player_cooldowns.at(player);
+    if (!cooldown.checkDelay())
         return;
+    
+    std::cout << "[swordWeapon] Player " << player << " using sword" << std::endl;
     auto& dmgs = game.getComponent<addon::eSpec::Damage>();
     auto& ppos = GET_ENTITY_CMPT(
         game.getComponent<addon::physic::Position2>(), player);

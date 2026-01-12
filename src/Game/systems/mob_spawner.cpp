@@ -17,7 +17,12 @@
 #include "Game/systems.hpp"
 
 void mobSpawner(Game& game) {
-    game.createSystem([&game](ECS::Registry&){
+    game.createSystem("mob_spawner", [&game](ECS::Registry&){
+        // Only spawn enemies on server/host or in solo mode
+        if (game.isClient()) {
+            return;
+        }
+        
         static te::Timestamp delta(5.0f);
         if (!delta.checkDelay())
             return;

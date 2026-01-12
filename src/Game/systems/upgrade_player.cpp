@@ -14,7 +14,7 @@
 #include "Game/systems.hpp"
 
 void upgradePlayer(Game& game) {
-    game.createSystem([&game](ECS::Registry&) {
+    game.createSystem("upgrade_player", [&game](ECS::Registry&) {
         auto& player = game.getComponent<addon::intact::Player>();
         auto& xps = game.getComponent<Xp>();
 

@@ -17,7 +17,7 @@
 #include "Game/systems.hpp"
 
 void mobMovement(Game& game) {
-    game.createSystem([&game](ECS::Registry&){
+    game.createSystem("mob_mov", [&game](ECS::Registry&){
         auto& players = game.getComponent<addon::intact::Player>();
         auto& positions = game.getComponent<addon::physic::Position2>();
         auto& velocities = game.getComponent<addon::physic::Velocity2>();
